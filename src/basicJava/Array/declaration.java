@@ -74,3 +74,30 @@ int[][] a[];
 int [][]a[];
 
 int []a[][];
+
+
+
+
+Every array in Jva is an object only Hence we can create array by using new oerpator.
+
+	int[] a = new int[3];
+
+				a------> [][][]
+	
+
+	
+
+For Every Array type coresponding classes are available and these classes are part of java language and not availabe to the programmer level.
+
+	System.out.println(a.getClass().getName());   //[I
+
+	Array Type		 Corresponding class name
+	int[]			 [I	
+	int[][]                  [[I
+	double[]		 [D
+	short[] 		 [S
+	byte[]			 [B
+	boolean[]		 [z
+
+
+
