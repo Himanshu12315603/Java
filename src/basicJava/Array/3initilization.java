@@ -67,13 +67,14 @@ Array Declaration, Creation and Initialization in Single line:-
 
 we can declare , crate and Initilize an Array in a single line (shortcut represntation).
 
-
-int[x] x; 
-x = new int[3];
-
-x[0] = 10;
-x[1] = 20;
-x[2] = 30;
+----------------
+int[x] x;      |
+x = new int[3];|
+               |
+x[0] = 10;     |
+x[1] = 20;     |
+x[2] = 30;     |
+----------------
 
 in single line:-
 
@@ -84,3 +85,33 @@ char[] ch = {'a','e','i','o','u'};
 string[] s = {"A","AA","AAA"};
 
 
+
+We can use this shortcut for Multidimensional Array also:- 
+
+int[][] x = {{10,20},{30,40,50}}
+
+
+int[][][] x = {{{10,20,30},{40,50,60}},{{70,80},{90,100,110}}};
+
+Sopln(x[0][1][2]);  //60
+Sopln(x[1][0][1]);  //80
+
+Sopln(x[2][0][0]);  //Re:
+
+Sopln(x[1][2][0]); //RE;
+
+Sopln(x[1][1][1]); //100
+
+Sopln(x[2][1][0]); //RE: AI00BE
+		  
+
+
+If we want to use this shortcut compulsury we should perform all Activity in a
+single line. if you are trying to divide into multiple line then we will get compile time Error.
+
+	int[] x = {10,20,30};  //right
+
+	int[] x;  //right
+
+	x = {10,20,30}; //wrong
+			//CE: illegal start of Expresion
