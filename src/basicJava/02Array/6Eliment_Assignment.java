@@ -74,3 +74,30 @@ interface type Array 			Its Implementation class objects are allowed.
 
 
 
+
+
+Case1:- Element level promoshion is not applicable at Array level for Example char Element can be promoted to
+int type whereas char Array can not be promoted to int Array.
+
+
+
+	int[] x = {10,20,30,40};
+	char[] ch = {'a','b','c','d'};
+
+	
+	int[] b = x; // correct
+	int[] c = ch;// CE: incompatible types
+		     // found: char[]
+		     // required: int[]
+
+
+char --------> int   // correct
+char[]-------> int[] // wrong
+int ---------> double // correct
+int[] -------> double[] //wrong
+float -------> int    // wrong
+float[] -----> int[]  //wrong
+String ------> object //correct
+String[] ----> object[] //correct
+	
+		  
