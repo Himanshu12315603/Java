@@ -100,4 +100,122 @@ float[] -----> int[]  //wrong
 String ------> object //correct
 String[] ----> object[] //correct
 	
-		  
+
+But in the case of Object type arrays child class type Array can be promoted to 
+parent class type Array.
+
+Eg.     String[] s = {"A","B","C"};
+	Object[] a = s;
+
+
+
+Case 2:- whenever we are assining one Array to another Array internal Eliment 
+won't be copied jush refrence variable will be reasigned.
+
+int[] a = {10,20,30,40,50,60};
+int[] b = {70,80};
+
+1. a = b
+2. b = a
+
+
+
+Case3:- whenever we are asigning one Array to Another Array the dimension must be matched.
+
+For Eg. In the place of 1-dimensional int Array we should provide one dimensional Array only, 
+    if we are trying to provide Any other dimension then we will get CE.
+
+
+    int[][] a = new int[3][];
+
+    a[0] = new int[4][3]; //CE: incompatible types
+			  //found: int[][]
+			  //required: int[]
+
+    a[0] = 10;   //CE: incompatible types
+		 //found: int
+		 //required: int[]
+
+    a[0] = new int[2];
+
+whenever we are asigning one Array to another Array both dimension and types
+must be matched but sizes are not required to match.
+
+Eg1. 
+class Test {
+	public static void main(String[] args) {
+		for(int i=0; i<=args.length; i++) {
+			System.out.println(args[i]);
+		}
+	}
+}
+
+o/p:- Java Test A B C Enter
+	A
+	B
+	C
+	RE: AI00BE
+
+o/p:- Java Test A B Enter
+	A
+	B
+	RE: AI00BE
+
+o/p:- Java Test Enter
+	
+	RE: AI00BE
+
+------------------------------------------------------------------------
+
+
+
+Eg2. 
+
+class Test {
+	public static void main(String[] args) {
+		String[] argh = {"x","y","z"};
+
+		args = argh;
+
+		for(String s : args) {
+			System.out.println(s);
+		}
+	}
+}
+
+O/p:- Java Test A B C Enter
+	x
+	y
+	z
+
+o/p:- Java Test A B Enter
+	x
+	y
+	z
+
+o/p:- Java Test Enter
+	x
+	y
+	z
+-------------------------------------------------------------------------
+
+
+
+Eg3. 
+	int[][] a = new int[4][3]; ----->5
+
+	a[0] = new int[4]; ------------->1
+	a[1] = new int[2]; ------------->1
+
+	a = new int[3][2]; ------------->4
+
+
+
+
+1. Total How many Objects created?
+Ans. 11
+
+2. Total How many objects eligibble for GC?
+Ans. 7
+
+
