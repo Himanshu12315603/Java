@@ -49,3 +49,30 @@ class Test {
 
 // CE:- Cannot declare both m1(int[]) and m1(int...) in Test
 
+
+
+Case6:- 
+
+class Test {
+	public static void m1(int... x) 
+	{
+		System.out.println("var-arg method");
+	}
+	public static void m1(int x) 
+	{
+		System.out.println("General method");
+	}
+
+	public static void main(String[] args) 
+	{
+		m1();       // var-arg method
+		m1(10,20);  // var-arg method
+		m1(10);     // General method
+	}
+}
+
+In general var-arg method will get least priority that is if no other mehod matched then only
+var-method will get the chance. It is exactly same as default case inside switch.
+
+
+
