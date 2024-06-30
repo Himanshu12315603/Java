@@ -109,4 +109,31 @@ RE:- NO such method Error main
 
 
 
+-----------------------------------------------------------------------------------------------------------
 
+Eg. 
+class Test {
+	static 
+	{
+		System.out.println("Static Block");
+	}
+	public static void main(String[] args) 
+	{
+		System.out.println("Main method"); 
+	}
+}
+
+1.6 v						1.7 v
+
+javac Test.java					Javac Test.java
+java Test 					java Test
+
+o/p:- Static Block				o/P:- Static Block
+      Main method				      Main method
+
+
+
+Q. Without writing main method is it possible to print same statament to the Console:-
+Ans:- 
+	Yes by using static block but this rule is applicable untill 1.6v. But 1.7v onword
+	it is imposible to print same Statement to console without writing main method.
