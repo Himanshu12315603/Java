@@ -52,4 +52,37 @@
 
 
 
-5. Coding Standard for Constant:- 
+5. Coding Standard for Constant:- Usully constants names are nouns should contain only Uppercase
+		character and if it contain multiple word then these words are seprated with Underscore(_)
+		symbol.
+
+
+		MAX_VALUE
+		MAX_PRIORITY
+		NORM_PRIORITY
+		MIN_PRIORITY
+		PI
+		--------------------------------Noun
+
+Note:- Usually we can declare constant with public static and final modifiers.
+
+Java Bean a simple java class with private property and public getter and setter method.
+
+public class StudentBean
+{
+	private String name;
+	
+	public void setName(String name)
+	{
+		this.name = name;
+	}
+	public String getName()
+	{
+		return name;
+	}
+}-----------------------------------------class name ends with 'Bean' is not offical
+						convntion from SUN
+
+
+
+
