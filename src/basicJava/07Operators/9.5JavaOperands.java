@@ -92,3 +92,113 @@ o/p:- object created for: j.l.String
 Eg. Test t = new Test();
     Test t1 = new Test(10);
     Test t2 = new Test("durga");
+
+    But newInstance method internally calls no argument constructor.Hence to use new
+    instance method compulsury currosponding class should contain no-argument constructor
+    otherwise we will get Run time Exception saying Instantiation Exception.
+
+    While using new operator at Run time if the currosponding .class file not available then 
+    we will get Runtime Exception saying:-NoclassDef FoundError :Test
+
+			Test t = new Test();  		// RE: NoclassDef Found Error: Test
+
+		At Runtime if Test.class file not available then we will get R.E saying:- Class Not Found Exception .Test123
+
+
+
+		object o = class.forName(args[0]).newInstance();	//Java Test Test123
+
+
+		At runtime if Test123.class file not available then we will get runtime Exception saying:- Re: classNotFoundException.Test123
+
+
+
+	
+													   
+
+		new							newInstance()
+
+1. It is operator in java				1. It is a method present in java.lang.class
+
+2. we can use new operator to create			2. We can use this method to create object if
+	object if we know classname 				we don't know class name at the beginning
+	at the beggining.				and it is available dynamically at Runtime.
+
+3. To use new operator class not required		3. To use newInstance() compulsary class should
+    to contain no-arg constructor.			   contain no-arg constructor otherwise we will get
+    							   RE:- Instantiation Exception
+
+4. At runtime if class file not available		4. RE: classNotFound Exception
+   then we RE:- NoclasDefFound Error.
+
+
+
+
+______________________________________________________________________________________________________________________
+
+
+
+			@Difference between classNot FoundException & No classDef Found Error:-
+
+For Hard-Coded class names, at Runtime if the coresponding .classfile is not available then we will get runtime Exception
+Saying:- NoClassDefFound Error , which is unchecked.
+
+		Test t = new Test();
+	
+
+	At Runtime if Test.class file is not available then we will get R.E saying:- NoclassDef FoundError :Test
+
+
+	For Dynamically provided class names At Runtime if the coresponding .classfile is not available then we will get
+	R.E saying:- clasNotFoundException, which is checked Exception.
+
+	
+	object o = Class.forName(args[0]).newInstance();	// java Test Student
+
+	At runtime if student .classfile not available then we will get RE saying:- ClassNot Found Exception: Student
+
+
+
+
+
+	instanceof				v/s			isInstance()
+
+instanceof is an operator in java.				  isInstance is a method present in java.lang.class. we can
+we can use instanceof to check whether the given		   use isInstance method to check whether the given object is
+object is of particular type or not and we know 		   a particular type or not and we don't know the type at the
+the type at the beggining.						beginning and it is available dynamically at Runtime.
+
+Thread t = new Thread();
+Sopln(t instanceof Runnable);
+Sopln(t instanceof object);
+
+
+
+class Test {
+	public static void main(String[] args) throws Exception {
+
+		Thread t = new Thread();
+
+		System.out.println(Class.forName(args[0].isInstance(t));
+
+	}
+}
+
+	java Test Runnable
+
+	o/p:- True
+
+	java Test String
+	
+	o/p:- false
+
+
+isInstance() method is method equvalent of Instanceof operator.
+
+
+
+
+
+
+
+
