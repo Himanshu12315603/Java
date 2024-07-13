@@ -44,4 +44,24 @@ else {					} else {				}else {
 o/p:- Hi				o/p:- Hi				o/p:- Hello
 
 
-else part and curly braces
+else part and curly braces are optimal without curly Buraces only one Statement is allowed 
+	under if which should not be declarative statement.
+
+
+
+if(true)			if(true);		if(true)		if(true) {
+	Sopln("Hello");					int x= 10;		int x= 10;
+										}
+
+
+
+Semicolon(;) is a valid java Statement which is also known as empty statement.
+
+Note:- There is no dengling else problem in java Every else is maped to the
+	nearest if statement.
+
+		if(true)
+			if(true)
+				Sopln("Hello");
+			else
+				Sopln("Hi");
