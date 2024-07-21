@@ -193,3 +193,47 @@ Eg.
           import static java.lang.Math.*;
           import static java.lang.System.*;
           
+
+
+
+
+
+Which of the following import Statement are valid:-
+
+import java.lang.Math.*;   //wrong
+import java.lang.Mat.sqrt;   //wrong
+import static java.lang.Math.*;   //right
+import static java.lang.Math.sqrt();   //wrong
+import static java.lang.Math.sqrt.*;   //wrong
+import static java.lang.Math.sqrt;   //right
+import java.lang;   //wrong
+import static java.lang;   //wrong
+import java.lang.*;  //right
+import static java.lang.*;  //wrong
+
+
+
+
+
+2 pkgs Contains a class or interfaces with the same name is very raier and Hence ambiguous 
+problem is also very raier in Normal import.
+                                    But 2 classes or intrafaces contain a variable or method 
+              with same name is very common and Hence ambiguoti problem is also very common
+              problem in static import.
+
+
+
+
+Uses of static import reduces readibility and creater confusion and Hence if there is no 
+specific requirement then it is not recomanded to use static import.
+
+
+@Difference between Normal import and static import:- 
+
+We can use Normal import to import classes and interfaces of a particular pkg.
+Whenever we're using Normal import it is not required to use fully coulfied named
+and we can use shortname directly.
+
+
+We can use Static import to import static members of a particular class or interface whenever we are 
+writing static import it is not require to use class name to access static members and we can access directly.
