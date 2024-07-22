@@ -25,6 +25,7 @@ The main advantage of packages are:-
 4. It provides security for our components.
 
 
+_________________________________________________________________________________
 
 
 There is one universly excepted naming convension for packages that is 
@@ -32,7 +33,7 @@ use internet domain name in reverse.
 
 
 Eg.             com.icicibank.loan.housing.Account
-
+                |                |      |          |
 client's internet            Module   subModule    class name
 domain name in                name     name
 reverse.
@@ -40,7 +41,7 @@ reverse.
 
 
 Eg.
-package coom.durgasoft.scjp;
+package com.durgasoft.scjp;
 
 public class Test {
   public static void main(String[] args) {
@@ -79,9 +80,10 @@ then we will get CE:
 
 Eg. java -d z: Test.java
 
-if z: not available then we will get CE saying:- directry not found: z:
+# if z: not available then we will get CE saying:- directry not found: z:
+_________________________________________________________________________________
 
-At the time of execution we have to use fully coullified name.
+# At the time of execution we have to use fully coullified name.
 
     java com.durgasoft.scjp.Test
 
