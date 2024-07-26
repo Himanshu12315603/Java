@@ -94,3 +94,75 @@ But the main disadvantage of the final keyword is we are missing key benfits of 
 
 
 Hence if there is no specific requirment then it is not recomanded to use final keyword.
+
+
+
+
+
+4. Abstract modifier:- Abstract is a modifier applicable for classes and Methods but not for variables.
+
+
+a). Abstract method:- Eventhough we don't know about implimentation, still we can declare a method with Abstract
+          modifier that is for Abstract Method only declaration is available but not implimentation Hence 
+          Abstract method declaration should Ends with(;).
+
+
+Eg. public abstract void m1();      //right
+    public abstract void m1(); { }  //wrong
+
+
+
+
+b). child class is responsible to provide implimentation for parent class Abstract Methods.
+
+Eg.
+abstract class Vechicle 
+{
+  abstract public int get No of wheels();
+}
+
+
+class Bus extends Vechicle                  class Auto extends Vechicle
+{                                           {
+  public int getNoOfWheels()                    public int getNoOfWheels()
+  {                                             {
+    return 7;                                       return 3;
+  }                                              }
+}                                           }
+
+By declaring abstract method in the parent class we can provide guidelines to child
+classes such that which method compulsory child has to impliment.
+
+
+c). Abstract method never talks about implimentation if any modifier talks about implimentation then 
+it forms illigal combination with abstract modifier the following are various illigal combination 
+of modifiers for methods with respect to abstract.
+
+
+                                            final
+                                            native 
+                                            synchronized 
+abstract                                    static 
+                                            private
+                                            strictfp
+
+
+Eg.
+
+abstract final void m1();       //CE: illigal combination of modifiers: abstract and final
+
+
+d). abstract class:- For any java class if we are not allowed to create an object because of particle
+                implimentation such type of class we have to declare with Abstract modifier that for 
+                 abstract classes instianciason is not possible.
+
+Eg.
+abstract class Test 
+{
+  public static void main(String[] args) 
+  {
+    Test t = new Test();
+  }
+}
+
+// CE: Test is abstract; cannot be instantiated
