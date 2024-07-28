@@ -1,4 +1,4 @@
-1.Public class:- If a class declare as public then we can access 
+:1.Public class:- If a class declare as public then we can access 
                  that class from anywhere.
 
 Eg. 
