@@ -1,4 +1,4 @@
-:1.Public class:- If a class declare as public then we can access 
+1.Public class:- If a class declare as public then we can access 
                  that class from anywhere.
 
 Eg. 
@@ -66,7 +66,8 @@ class C extends P {
 }
 
 
-b). final class:- if a class declare as final we can't extend functanility of that class that 
+
+b). final class:- if a class declare as final we can't extend functanility of that 
                   class that is we can't create child class for that class that is inheritence 
                   is not possible for final classes.
 
@@ -96,6 +97,7 @@ But the main disadvantage of the final keyword is we are missing key benfits of 
 Hence if there is no specific requirment then it is not recomanded to use final keyword.
 
 
+_________________________________________________________________________________________________________________
 
 
 
@@ -122,6 +124,7 @@ abstract class Vechicle
 }
 
 
+
 class Bus extends Vechicle                  class Auto extends Vechicle
 {                                           {
   public int getNoOfWheels()                    public int getNoOfWheels()
@@ -129,6 +132,7 @@ class Bus extends Vechicle                  class Auto extends Vechicle
     return 7;                                       return 3;
   }                                              }
 }                                           }
+
 
 By declaring abstract method in the parent class we can provide guidelines to child
 classes such that which method compulsory child has to impliment.
@@ -150,6 +154,7 @@ abstract                                    static
 Eg.
 
 abstract final void m1();       //CE: illigal combination of modifiers: abstract and final
+
 
 
 d). abstract class:- For any java class if we are not allowed to create an object because of particle
@@ -215,4 +220,23 @@ class P
 
 //CE: P is not abstract and does not override abstract method m1() in P
 
-                    Read Every thing then go for further process.
+
+3. If we are extending Abstract class then for each and every abstract method of parent class we should
+provide implimentation otherwise we have to declare child class as abstract in this case next level child
+class is responsible to provide implimentation.
+
+Eg.
+
+abstract class P 
+{
+  public abstract void m1();
+  public abstract void m2();
+}
+
+class C extends P 
+{
+  public void m1() { }
+}
+
+//CE: C is not abstract and does not override abstract method m2() in P.
+
