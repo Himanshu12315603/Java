@@ -27,6 +27,7 @@ if class A is not public then while compiling B class we will get compile
 time Error saying:- pack1.A is not public in pack1; cannot be accessed from outside package.
 
 
+_________________________________________________________________________________________________________________
 
 
 
@@ -37,6 +38,7 @@ time Error saying:- pack1.A is not public in pack1; cannot be accessed from outs
 
         Eg. previous eg.
 
+_________________________________________________________________________________________________________________
 
 
 3. final modifier:- final is the modifier applicable for class methods and variables.
@@ -173,70 +175,43 @@ abstract class Test
 // CE: Test is abstract; cannot be instantiated
 
 
+
 _________________________________________________________________________________________________________________
 
 
-abstract class v/s abstract method:-
+
+5. strictfp [strict floating point] Modifier:-
+
+introduce in 1.2v.
+We can declare strictfp for classes and methods but not for variables.
+
+Usully the result of floating point arthmetic is varid from platform to platform if we want platform 
+independent results for floating point arthmetic then we should go for strictfp modifier.
 
 
-1. if a class contain at least 1 abstract method then compulsory we should declare class as abstract,
-  otherwise we will get Compile time Error.
-
-  Reason:- if a class contain atleast 1 abstract method then implimentation is not complete and Hence 
-  it is not recomanded to create an object to restrict object instations compulsory we should declare
-  class as abstract.
+If a method declare as strictfp all floating point calculation in that method has to follow IEEE 754
+Standard so that we will get platform independent result.
 
 
-2. Eventhough class doesn't contain any abstract method still we can declare class as abstract if we don't want
-    instantion that is abstract class can contain 0 number of abstract method also.
 
-Eg1. http servlet class is abstract but it doesn't contain any abstract methods.
-
-
-Eg2.  Every Adapter class is recomanded to declare as Abstract but it doesn't contain any abstract method.
+Abstract modifier never talks about implimentation whereas strictfp method always talks about implimentation Hence
+abstract strictfp combination is illigal for methods.
 
 
-Eg1. 
-class P 
-{
-  public void m1();
-}
-// CE: missing method body or declare abstract.
+                    _______________________________________________________________________________________
 
 
-Eg2.
-class P 
-{
-  public abstract void m1() { }
-}
-// CE: abstract methods cannot have a body.
+
+strictfp class:- if a class declare as strictfp then every floating point calculation present in every 
+concreat method has to follow IEEE 754 Standard so that we will get platform independent results.
+
+we can declare abstract strictfp combination for classes that is abstract strictfp combination is illigal 
+for classes but illigal for methods.
 
 
-Eg3.
-class P 
-{
-  public abstract void m1();
-}
-
-//CE: P is not abstract and does not override abstract method m1() in P
+abstract strictfp clss Test {                                   abstract strictfp void m1();  // CE:- illigal combination of modifiers: abstract and strictfp
+            //right                                                                           
+        }
 
 
-3. If we are extending Abstract class then for each and every abstract method of parent class we should
-provide implimentation otherwise we have to declare child class as abstract in this case next level child
-class is responsible to provide implimentation.
-
-Eg.
-
-abstract class P 
-{
-  public abstract void m1();
-  public abstract void m2();
-}
-
-class C extends P 
-{
-  public void m1() { }
-}
-
-//CE: C is not abstract and does not override abstract method m2() in P.
 
