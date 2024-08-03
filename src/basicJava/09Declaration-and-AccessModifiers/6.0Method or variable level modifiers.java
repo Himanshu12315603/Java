@@ -257,7 +257,7 @@ ________________________________________________________________________________
 
 
 
-7. syncronized Modifier:- It is the modifier applicable for methods and blocks but not for classes and variable.
+7. Syncronized Modifier:- It is the modifier applicable for methods and blocks but not for classes and variable.
 
 if multiple threads trying to operate simeltenosly on the same java object then there may be a chance of data 
 inconsisty problem, this is called race condition. we can overcome this problem by using syncronized keyword.
@@ -271,9 +271,70 @@ syncronized method should compulsory contain implimentation whereas abstract met
 Hence abstract syncronized is illigal combination of modifier for methods.
 
 Eg.
-syncronized m1() {
+syncronized m1() 
+{
 
 }
 
 
+_______________________________________________________________________________________________________________
+
+
+8. native modifier:- Native is the modifier applicable only for methods and we can't apply anywhere else.
+
+The method which are implimented in Non-Java(mostly c or c++) are called native methods or foreign method.
+
+a). The main objectives of native keyword are to improve performance of the system.
+
+b). To achive mission level or memory level communication.
+
+c). To use already Existing legacy Non-java Code.
+
+
+# Psudo Code to use native keyword in java:-
+
+class Native 
+{
+  static 
+  {
+    System.loadLibary("native library");
+  }
+
+  public native void m1();
+
+}
+
+1. Load native libraries
+2. Declare a native methods
+
+class client 
+{
+  public static void main(String[] args)
+  {
+    Native n = new Native();
+    n.m1();
+    |
+    |
+  }
+}
+3.Invoke a native method
+
+For native methods implimentation is already available in old language, Like C/C++ and we are not 
+responsible to provide implimentation, Hence native method declaration should ends with (;).
+
+Eg.
+public native void m1();
+public native void m1() { }  ---------> // CE: native methods cannot have a body
+
+
+For native methods implimentation is already available in old language but for abstract methods implimentation 
+should not be available Hence we can't declare native method as abstract that is native abstract combination is 
+illigal combination for methods.
+
+
+We can't declare native method as strictfp because there is no guranty that old lang follow IEEE 754 standard 
+Hence native strictfp combination is illigal combination for methods.
+
+The main advantage of native keyword is performanced will be improved but the main disadvantage of native keyword
+is it breaks platform independent nature of java.
 
