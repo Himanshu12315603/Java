@@ -323,6 +323,38 @@ For native methods implimentation is already available in old language, Like C/C
 responsible to provide implimentation, Hence native method declaration should ends with (;).
 
 Eg.
+import java.util.*;
+
+class ArrangeZero {
+  public static void main(String[] args) {
+    Scanner scan = new Scanner(System.in);
+
+    int arr[] = {0, 1, 0, 3, 12};
+    int n = arr.length;
+
+    int[] result = findzero(arr, n);
+    System.out.println(Arrays.toString(result));
+  }
+
+  public static int[] findzero(int arr[], int n) {
+    int array[] = new int[n];
+    int nonZeroIndex = 0;
+
+    for (int i = 0; i < n; i++) {
+      if (arr[i] != 0) {
+        array[nonZeroIndex] = arr[i];
+        nonZeroIndex++;
+      }
+    }
+
+    // Fill the rest with zeros
+    for (int i = nonZeroIndex; i < n; i++) {
+      array[i] = 0;
+    }
+
+    return array;
+  }
+}
 public native void m1();
 public native void m1() { }  ---------> // CE: native methods cannot have a body
 
@@ -337,4 +369,36 @@ Hence native strictfp combination is illigal combination for methods.
 
 The main advantage of native keyword is performanced will be improved but the main disadvantage of native keyword
 is it breaks platform independent nature of java.
+
+_______________________________________________________________________________________________________________
+
+
+9. transient keyword:- It is a modifier applicable only for variable.
+
+We can use transient keyword serialization context.
+
+At the time of serialization if we don't want to save the value of a particular variable to meet security
+constraint then we should declare that variable as transient.
+
+At the time of serialization JVM ignore original value of transient variable and save default value to the
+file. Hence transient means not to serialize.
+
+
+
+userName:-durga     ------> serialization ---------> userName:- durga
+pswd:- 123ab                                         pswd:- null
+// a1  //transient                                        // abc.ser
+
+
+                                                              |
+userName:-durga         <--------------DeSerialization -------|
+pswd:- null 
+
+// a2
+
+
+
+_______________________________________________________________________________________________________________
+
+
 
