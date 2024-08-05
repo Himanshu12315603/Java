@@ -401,4 +401,22 @@ pswd:- null
 _______________________________________________________________________________________________________________
 
 
+10. volatile Modifier:- 
+a). volatile is a Modifier applicable only for variables and we can't apply anywhere else.
+
+b). If the value of a variable keep on changing by multiple thread then there may be a chance of data inconsistency 
+problem we can solve this problem by using volatile modifier.
+         If a variable declare as volatile then for every thread JVM will create a seprate local copy.
+
+c). Every modifier peroformed by the thread will takes place in local copy so that there is no effect 
+    on remaining thread.
+
+d). The main advantage of volatile keyword is we can overcome data inconsisty problem but main disadvantage 
+of volatile keyword is creating and maintaining a seprate copy for every thread increase complexity of programming 
+and create performance problems. Hence if there is no specific requirment then its never recomanded to use volatile 
+keyword and it is almost depricated keyword.
+
+e). final var means the value never changes whereas volatile variable means the value keep on changing Hence volatile final 
+is illigal combination for variable.
+
 
