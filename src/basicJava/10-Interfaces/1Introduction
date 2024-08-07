@@ -23,3 +23,76 @@
 
 11. Conclusions
 
+
+
+
+
+
+
+
+
+_____________________________________________________________________________________
+
+1. Introduction:-
+
+Defination1:- Any service requirment specification(SRS) is considered as an Interface.
+
+Eg1. JDBC API access requirment specification to develop Database Driver.
+
+---> Database vendor is responsible to impliment JDBC API.
+      
+
+                        SUN 
+                        |
+                        |
+                      JDBC API
+                  /        |       \
+                 /         |  ----- \
+                /          |         \
+        Oracle Driver   Mysql Driver    DB2 Driver
+
+
+Eg2. Servlet API access requirment specification to develop web Server.
+
+---> Web server vendor is responsible to impliment servlet API.
+
+
+                        SUN 
+                        |
+                        |
+                   Servlet API
+                  /        |       \
+                 /         |------- \
+                /          |         \
+    Apache Tom Cat    Oracle Web logic   IBM web sphere
+        Server          Server                Server
+
+
+
+Defination2:- From client point of view and Interface defines the set of services what he is expecting.
+          
+            From Service provider point of view an interface defines the set of services what he is offering
+Hence Any contract between client and service provider is considered as an interface.
+
+
+Eg. Through Bank ATM GUI Screen, Bank people are highlighting the set of Services what they are offering at the 
+same time the same GUI Screen represents the set of services what customer is expecting. Hence this GUI Screen 
+Access contract between customer and bank people.
+
+                      
+                      withdraw 
+ customer             Mini Statement                    Bank people 
+                      Balance Enquiry 
+
+                            
+                    Bank GUI ATM Screen 
+
+
+
+              
+Defination3:- Inside interface every method is always abstract whether we are declaring or not. Hence Interface
+      is considered as 100% Pure abstract class.
+
+
+Summery Defination:- Any Service requirment specification or any contract between client and service provider or 
+100% pure abstract class is nothing but interface.
