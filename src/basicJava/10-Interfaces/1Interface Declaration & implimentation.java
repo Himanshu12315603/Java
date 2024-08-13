@@ -81,4 +81,76 @@ Q1. Consider the following expression (x extends y) for which of the following p
 
 ______________________________________________________________________________________________________
 
+Q2. x extends y,z 
+ 
+    x, y, z should be interfaces 
+
+______________________________________________________________________________________________________
+
+Q3. x impliments y,z 
+
+    x ----> class 
+    y,z ---> interfaces 
+
+______________________________________________________________________________________________________ 
+
+Q4. x extends y impliments z 
+
+    x, y -----> classes 
+    z --------> interface 
+
+______________________________________________________________________________________________________ 
+
+Q5. x implements y extends z 
+
+CE: because we have to take extends first follower by interface 
+
+______________________________________________________________________________________________________
+
+
+@ Every method present inside interface is always public and abstract whether we are declaring or not. 
+
+Eg. 
+
+interface Interf 
+{
+  void m1(); ---> public:- To make this method available to every implimentation class.
+             ---> abstract:- implimentation class is responsible to provide implimentation.
+}
+
+Hence inside interface the following method declaration are equal. 
+
+
+
+
+                void m1();
+equal           public void m1();  
+                abstract void m1();
+                public abstract void m1();
+
+
+As Every interface method is always public and abstract, we can't declare interface method with the following modifiers. 
+
+
+public          ---------------> private 
+                ---------------> protected // wrong 
+
+
+
+
+abstract        ---------------> static 
+                ---------------> final 
+                ---------------> synchronizded 
+                ---------------> strictfp
+                ---------------> native // wrong
+
+
+Q. which of the following method declaration are allowed inside interface? 
+
+public void m1() { }   // wrong 
+private void m1();     // wrong
+protected void m1();    // wrong
+static void m1();       // wrong
+public abstract native void m1();   // wrong
+abstract public void m1();          //right
 
