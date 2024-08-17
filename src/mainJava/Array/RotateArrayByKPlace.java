@@ -1,5 +1,5 @@
 import java.util.*;
-public class Main {
+class Main {
   public static void Rotatetoleft(int[] arr, int n, int k) {
     if (n == 0)
       return;
