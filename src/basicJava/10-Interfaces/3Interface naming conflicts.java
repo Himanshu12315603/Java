@@ -53,4 +53,32 @@ interface Left                      interface Right
 
 We can write any java class which implements both interface simultenesly.
 
+____________________________________________________________________________________________________
+
+Q. Is a Java class can implement any number of interface simultenesly? 
+Ans:- yes, Execpt a particlar case.
+      If 2 interface contains a method with same signature but different written types then it is 
+      impossible to implement both interface simultenesly.
+
+
+      
+2. interface variable naming Conflicts:- 
+    2 interface can contain a variable with the same name and there may be a chance of variable 
+    naming Conflicts but we can solve this problem by using interface names. 
+
+Eg. 
+interface Left                  interface Right 
+{                               {
+  int x = 777;                      int x = 888;
+}                               }
+
+class Test implements Right, Left 
+{
+  public static void main(String[] args) 
+  {
+    System.out.pritnln(x); --------> // CE: reference to x is ambiguous
+    System.out.println(Left.x);     //  777 
+    System.out.println(Right.x);    // 888
+  }
+}
 
