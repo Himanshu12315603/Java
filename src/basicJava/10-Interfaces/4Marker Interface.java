@@ -28,3 +28,4 @@ Ans:- To reduce complexity of programming and to make java lang as simple.
 
 Q. Is it possible create our own marker interface?
 Ans:- Yes, but customization of JVM is required.
+
