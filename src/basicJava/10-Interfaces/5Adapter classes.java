@@ -69,3 +69,22 @@ class Test extends Adapter x
   }
 }
 
+
+We can develop a servlet in the following 3 ways:- 
+
+1. By implementing Servlet Interface 
+2. By extending Generic Servlet (AC)
+3. By extending Https Servlet (AC)
+
+
+if we impliment Servlet Interface for each and every method of that interface we should provide implimentation it increase length of the code
+and reduce readibility. 
+                     Insted of implimenting Servlet interface directly if we extend Generic servlet we have to provide implimentation 
+  only for service method and for all remaining methods we are not require to provide implimentation. Hence more or less Generic 
+  Servlet access adapter class for Servlet interface. 
+
+
+  Note:- Marker interface and Adapter class Simplify comlexity of programming and these are best utility to the programmer 
+  and programmer life will become simple.
+
+
