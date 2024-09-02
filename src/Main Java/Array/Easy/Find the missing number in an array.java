@@ -3,7 +3,7 @@ import java.util.*;
 class Main {
  public static void main(String[] args) {
    int n = 5;
-   int arr[] = {1,2,4,5};
+   int arr[] = {1,2,4,5};   // number should be unique from 0 to n;
    int ans = missingNumber(arr,n);
    System.out.println("The missing Number is "+ans);
  }
