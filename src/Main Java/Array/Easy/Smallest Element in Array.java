@@ -8,7 +8,7 @@ class Solution
     System.out.println(smallest(arr));
   }
 
-  public static int smallest(int arr[]) 
+   static int smallest(int arr[]) 
   {
 
     int smallNo=Integer.MAX_VALUE;
