@@ -6,8 +6,8 @@ class Solution
   {
     
     int arr[] = {12,14,16,23,32,42,24,89};
-    int target = 32;
-    System.out.println(linearSearch(arr,target));
+    int target = 32;    // This number i have to find 
+    System.out.println(linearSearch(arr,target));       // if the target will find then it will print true
   }
 
   // Time complexity of O(n);
