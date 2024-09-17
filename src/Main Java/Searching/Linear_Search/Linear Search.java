@@ -17,7 +17,7 @@ class Solution
     int size = arr.length;
     for(int i=0; i<size; i++)
     {
-      if(arr[i]==target) {
+      if(arr[i]==target) {          // If arr[i]==target then i will print true
         return true;
       }
     }
