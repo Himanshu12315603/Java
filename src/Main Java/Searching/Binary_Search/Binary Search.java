@@ -23,7 +23,7 @@ class Solution
 
       // int mid = low + (high-low)/2;
       
-      if(arr[mid]==target) {
+      if(arr[mid]==target) {    // if the mid is equal to target
         return mid;
       }else if(arr[mid]<target) {
         low=mid+1;
