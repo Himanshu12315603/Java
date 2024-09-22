@@ -6,6 +6,8 @@ class Solution {
       System.out.print(out[i]+" ");
     }
   }
+
+  // Output will display the square of the arr in sorted order 
     public static int[] sortedSquares(int[] nums) {
         int n = nums.length;
         int i=0;
@@ -24,6 +26,6 @@ class Solution {
                 j--;
             }
         }
-        return ans;
+        return ans;     /* 0 1 9 16 100 */
     }
 }
