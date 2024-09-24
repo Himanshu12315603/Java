@@ -51,7 +51,7 @@ class Solution {
 
     System.out.println("After moving zero at the end");
     for (int i = 0; i < n; i++) {
-      System.out.print(arr[i]+" ");
+      System.out.print(arr[i]+" ");    //[1,3,1,0,0]
     }
   }
 
