@@ -3,8 +3,8 @@ import java.util.*;
 class Solution 
 {
   public static void main(String[] args) {
-    //int prices[] = {7,1,5,3,6,4};
-    int prices[] = {7,6,4,3,1};
+    int prices[] = {7,1,5,3,6,4};    // 5
+    // int prices[] = {7,6,4,3,1};   // 0
 
 
     System.out.println(maxProfit(prices));
@@ -25,7 +25,7 @@ class Solution
         MaxProfit=Math.max(MaxProfit,currentProfit);
       }else 
       {
-        buyValue=prices[i];
+        buyValue=prices[i]; 
       }
     }
     return MaxProfit;
