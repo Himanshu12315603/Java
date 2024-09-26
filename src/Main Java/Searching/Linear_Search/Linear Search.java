@@ -11,6 +11,7 @@ class Solution
   }
 
   // Time complexity of O(n);
+  // Space complexity of o(n);
 
   public static boolean linearSearch(int arr[],int target)
   {
