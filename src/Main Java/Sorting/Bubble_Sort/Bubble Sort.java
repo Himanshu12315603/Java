@@ -14,6 +14,7 @@ class Solution
   // Bubble sort method
 
   // Space complexity:- O(n^2)
+  // Time complexity:- O(n^2);
   
   public static void BubbleSort(int arr[],int n)
   {
