@@ -11,7 +11,9 @@ class Solution
     System.out.println(binarySearch(arr,target));
   }
 
-  static int binarySearch(int arr[],int target)
+    // return the index 
+   // return -1 if the target doesn't exit 
+  static int binarySearch(int arr[], int target)
   {
     int n = arr.length;
     int low=0;
