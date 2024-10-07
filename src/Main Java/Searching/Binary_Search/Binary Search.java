@@ -8,28 +8,29 @@ class Solution
     int arr[] = {1,4,6,10,15,20,30,36,40};
     int target = 36;
 
-    System.out.println(binarySearch(arr,target));
+    int ans = binarySearch(arr, target);
+    System.out.println(ans);
+    
   }
 
     // return the index 
    // return -1 if the target doesn't exit 
   static int binarySearch(int arr[], int target)
   {
-    int n = arr.length;
-    int low=0;
-    int high=n-1;
+    int low = 0;
+    int high = arr.length - 1;
     
     while(low<=high)
     {
-      int mid=(low+high)/2;
-
-      // int mid = low + (high-low)/2;
+      // find the middle value
+      int mid=(low+high)/2; // might be possible that it exceed the renge of int in java
+      // int mid = low + (high-low)/2;  // but it won't exceed 
       
-      if(arr[mid]==target) {    // if the mid is equal to target
+      if (arr[mid]==target) {    // if the mid is equal to target
         return mid;
-      }else if(arr[mid]<target) {
+      } else if(arr[mid]<target) {
         low=mid+1;
-      }else {
+      } else {
         high=mid-1;
       }
     }
