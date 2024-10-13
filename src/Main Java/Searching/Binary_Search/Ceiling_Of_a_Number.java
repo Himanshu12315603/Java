@@ -1,3 +1,5 @@
+// Ceiling of a Number ---> Smallest Element in array greater or equal to target
+
 import java.util.*;
 
 class Solution 
@@ -13,14 +15,15 @@ class Solution
     System.out.println(ans);
   }
 
+  // return the index of smalled no >= target
   public static int cellingNumber(int arr[], int target)
   {
-    
     int start = 0;
     int end = arr.length-1;
 
     while(start <= end) 
     {
+      // find the middle Element 
       int mid = start + (end - start)/2;
 
       if(arr[mid] == target) {
@@ -31,7 +34,6 @@ class Solution
         start = mid + 1;
       }
     }
-
-    return start;
+    return start;  // if target not found then ans should be :- 5
   }
 }
