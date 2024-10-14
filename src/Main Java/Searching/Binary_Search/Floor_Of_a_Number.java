@@ -8,7 +8,7 @@ class Solution
   {
     int arr[] = {2, 3, 5, 9, 14, 16, 18};
 
-    int target = 15;
+    int target = 15; // Here floor is 14 cause target not there and the greatest no is 14 in array which is less then 15(target)
 
     int ans = floorNumber(arr,target);
 
