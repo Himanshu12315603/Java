@@ -1,4 +1,4 @@
-// Floor of a Number :--> greatest Number which is Smaller or = target
+// Floor of a Number :--> greatest Number which is Smaller or equal to target
 
 import java.util.*;
 
