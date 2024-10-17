@@ -51,6 +51,7 @@ class Solution
       }else {
         ans = mid;
 
+        // if we got first idx then we don't need to move starting side 
         if(FirstIndex) {
           end = mid - 1;
         }else {
